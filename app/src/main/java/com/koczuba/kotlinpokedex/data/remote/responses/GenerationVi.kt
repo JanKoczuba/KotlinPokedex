@@ -1,6 +1,11 @@
 package com.koczuba.kotlinpokedex.data.remote.responses
 
+
+import kotlinx.serialization.SerialName
+
 data class GenerationVi(
-    val omegaruby-alphasapphire: OmegarubyAlphasapphire,
-    val x-y: XY
+    @SerialName("omegaruby-alphasapphire")
+    val omegarubyAlphasapphire: OmegarubyAlphasapphire,
+    @SerialName("x-y")
+    val xY: XY
 )

@@ -1,6 +1,11 @@
 package com.koczuba.kotlinpokedex.data.remote.responses
 
+
+import kotlinx.serialization.SerialName
+
 data class Icons(
-    val front_default: String,
-    val front_female: Any
+    @SerialName("front_default")
+    val frontDefault: String,
+    @SerialName("front_female")
+    val frontFemale: Any
 )

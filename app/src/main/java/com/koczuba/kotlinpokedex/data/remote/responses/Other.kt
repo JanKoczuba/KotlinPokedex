@@ -1,8 +1,15 @@
 package com.koczuba.kotlinpokedex.data.remote.responses
 
+
+import kotlinx.serialization.SerialName
+
 data class Other(
-    val dream_world: DreamWorld,
+    @SerialName("dream_world")
+    val dreamWorld: DreamWorld,
+    @SerialName("home")
     val home: Home,
-    val official-artwork: OfficialArtwork,
+    @SerialName("official-artwork")
+    val officialArtwork: OfficialArtwork,
+    @SerialName("showdown")
     val showdown: Showdown
 )

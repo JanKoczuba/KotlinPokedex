@@ -1,7 +1,13 @@
 package com.koczuba.kotlinpokedex.data.remote.responses
 
+
+import kotlinx.serialization.SerialName
+
 data class GenerationIv(
-    val diamond-pearl: DiamondPearl,
-    val heartgold-soulsilver: HeartgoldSoulsilver,
+    @SerialName("diamond-pearl")
+    val diamondPearl: DiamondPearl,
+    @SerialName("heartgold-soulsilver")
+    val heartgoldSoulsilver: HeartgoldSoulsilver,
+    @SerialName("platinum")
     val platinum: Platinum
 )

@@ -1,6 +1,11 @@
 package com.koczuba.kotlinpokedex.data.remote.responses
 
+
+import kotlinx.serialization.SerialName
+
 data class GameIndice(
-    val game_index: Int,
+    @SerialName("game_index")
+    val gameIndex: Int,
+    @SerialName("version")
     val version: Version
 )

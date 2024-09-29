@@ -1,8 +1,15 @@
 package com.koczuba.kotlinpokedex.data.remote.responses
 
+
+import kotlinx.serialization.SerialName
+
 data class UltraSunUltraMoon(
-    val front_default: String,
-    val front_female: Any,
-    val front_shiny: String,
-    val front_shiny_female: Any
+    @SerialName("front_default")
+    val frontDefault: String,
+    @SerialName("front_female")
+    val frontFemale: Any,
+    @SerialName("front_shiny")
+    val frontShiny: String,
+    @SerialName("front_shiny_female")
+    val frontShinyFemale: Any
 )
