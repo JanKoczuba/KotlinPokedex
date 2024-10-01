@@ -2,11 +2,11 @@ import kotlinx.serialization.Serializable
 import java.util.Locale
 
 @Serializable
-object PokemonListScreen
+object PokemonListScreenNav
 
 
 @Serializable
-data class PokemonDetails(
+data class PokemonDetailsNav(
     val dominantColor: Int?,
     val pokemonName: String,
 )
