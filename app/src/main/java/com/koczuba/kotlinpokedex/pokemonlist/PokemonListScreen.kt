@@ -17,6 +17,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
@@ -144,19 +146,23 @@ fun PokemonList(
     val isLoading by remember { viewModel.isLoading }
     val isSearching by remember { viewModel.isSearching }
 
-    LazyColumn(contentPadding = PaddingValues(16.dp)) {
-        val itemCount = if (pokemonList.size % 2 == 0) {
-            pokemonList.size / 2
-        } else {
-            pokemonList.size / 2 + 1
-        }
+
+    LazyVerticalGrid(
+        columns = GridCells.Adaptive(200.dp)
+    ) {
+        val itemCount = pokemonList.size
         items(itemCount) {
             if (it >= itemCount - 1 && !endReached && !isLoading && !isSearching) {
                 LaunchedEffect(key1 = true) {
                     viewModel.loadPokemonPaginated()
                 }
             }
-            PokedexRow(rowIndex = it, entries = pokemonList, navController = navController)
+            PokedexEntry(
+                entry = pokemonList[it],
+                navController = navController,
+                modifier = Modifier.padding(8.dp)
+            )
+
         }
     }
 
@@ -189,7 +195,7 @@ fun PokedexEntry(
     }
 
     Box(
-        contentAlignment = Alignment.Center,
+        contentAlignment = Center,
         modifier = modifier
             .shadow(5.dp, RoundedCornerShape(10.dp))
             .clip(RoundedCornerShape(10.dp))
@@ -242,34 +248,6 @@ fun PokedexEntry(
     }
 }
 
-@Composable
-fun PokedexRow(
-    rowIndex: Int,
-    entries: List<PokedexListEntry>,
-    navController: NavController
-) {
-    Column {
-        Row {
-            PokedexEntry(
-                entry = entries[rowIndex * 2],
-                navController = navController,
-                modifier = Modifier.weight(1f)
-            )
-            Spacer(modifier = Modifier.width(16.dp))
-            if (entries.size >= rowIndex * 2 + 1 && entries.size > 1) {
-                PokedexEntry(
-                    entry = entries[rowIndex * 2 + 1],
-                    navController = navController,
-                    modifier = Modifier.weight(1f)
-                )
-            } else {
-                Spacer(modifier = Modifier.width(16.dp))
-
-            }
-        }
-        Spacer(modifier = Modifier.height(16.dp))
-    }
-}
 
 @Composable
 fun RetrySection(
