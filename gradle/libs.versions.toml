@@ -35,7 +35,7 @@ androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-com
 #noinspection SimilarGradleDependency
 androidx-lifecycle-runtime-ktx-v286 = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtxVersion" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
-coil = { module = "io.coil-kt:coil", version.ref = "coil" }
+coil = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }

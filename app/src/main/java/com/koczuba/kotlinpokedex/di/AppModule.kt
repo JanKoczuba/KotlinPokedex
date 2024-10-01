@@ -3,7 +3,7 @@ package com.koczuba.kotlinpokedex.di
 import com.koczuba.kotlinpokedex.data.remote.PokeApi
 import com.koczuba.kotlinpokedex.repository.PokemonRepository
 import com.koczuba.kotlinpokedex.repository.PokemonRepositoryImplementation
-import com.koczuba.kotlinpokedex.util.Constants.Companion.BASE_URL
+import com.koczuba.kotlinpokedex.util.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
