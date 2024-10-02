@@ -76,7 +76,7 @@ dependencies {
 
     // Retrofit
     implementation(libs.retrofit)
-    implementation(libs.converter.gson)
+    implementation(libs.converter.retrofit)
     implementation(libs.okhttp)
     implementation(libs.logging.interceptor)
 

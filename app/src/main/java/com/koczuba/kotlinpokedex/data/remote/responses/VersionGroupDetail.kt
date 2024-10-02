@@ -2,7 +2,9 @@ package com.koczuba.kotlinpokedex.data.remote.responses
 
 
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class VersionGroupDetail(
     @SerialName("level_learned_at")
     val levelLearnedAt: Int,

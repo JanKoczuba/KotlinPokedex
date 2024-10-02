@@ -70,7 +70,7 @@ class PokemonListViewModel @Inject constructor(private val repository: PokemonRe
             when (result) {
                 is Resource.Success -> {
                     endReached.value = curPage * PAGE_SIZE >= result.data!!.count
-                    val pokedexEntries = result.data.results.mapIndexed { index, entry ->
+                    val pokedexEntries = result.data.results.mapIndexed { _, entry ->
                         val number = if (entry.url.endsWith("/")) {
                             entry.url.dropLast(1).takeLastWhile { it.isDigit() }
                         } else {
@@ -93,6 +93,8 @@ class PokemonListViewModel @Inject constructor(private val repository: PokemonRe
                     loadError.value = result.message!!
                     isLoading.value = false
                 }
+
+                is Resource.Loading -> isLoading.value = true
             }
         }
     }

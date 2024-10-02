@@ -2,7 +2,9 @@ package com.koczuba.kotlinpokedex.data.remote.responses
 
 
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Pokemon(
     @SerialName("abilities")
     val abilities: List<Ability>,
@@ -16,8 +18,6 @@ data class Pokemon(
     val gameIndices: List<GameIndice>,
     @SerialName("height")
     val height: Int,
-    @SerialName("held_items")
-    val heldItems: List<Any?>,
     @SerialName("id")
     val id: Int,
     @SerialName("is_default")
@@ -30,10 +30,6 @@ data class Pokemon(
     val name: String,
     @SerialName("order")
     val order: Int,
-    @SerialName("past_abilities")
-    val pastAbilities: List<Any?>,
-    @SerialName("past_types")
-    val pastTypes: List<Any?>,
     @SerialName("species")
     val species: Species,
     @SerialName("sprites")

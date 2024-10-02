@@ -2,7 +2,7 @@
 accompanistCoil = "0.15.0"
 agp = "8.5.2"
 coil = "2.7.0"
-converterGson = "2.11.0"
+converterRetrofit = "1.0.0"
 hiltAndroid = "2.52"
 hiltCompiler = "1.2.0"
 hiltLifecycleViewmodel = "1.0.0-alpha03"
@@ -36,7 +36,7 @@ androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-com
 androidx-lifecycle-runtime-ktx-v286 = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtxVersion" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 coil = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
-converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+converter-retrofit = { module = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter", version.ref = "converterRetrofit" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -61,7 +61,7 @@ palette-v7 = { module = "com.android.support:palette-v7", version.ref = "palette
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "composeNavigation" }
-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization"}
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

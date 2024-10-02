@@ -72,7 +72,7 @@ fun PokemonListScreen(
                 contentDescription = "Pokemon",
                 modifier = Modifier
                     .fillMaxWidth()
-                    .align(Alignment.CenterHorizontally)
+                    .align(CenterHorizontally)
             )
             SearchBar(
                 hint = "Search...",
@@ -223,7 +223,7 @@ fun PokedexEntry(
                 contentDescription = entry.pokemonName,
                 modifier = Modifier
                     .size(120.dp)
-                    .align(Alignment.CenterHorizontally),
+                    .align(CenterHorizontally),
                 loading = {
                     CircularProgressIndicator(
                         color = MaterialTheme.colorScheme.primary,
