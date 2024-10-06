@@ -5,7 +5,6 @@ coil = "2.7.0"
 converterRetrofit = "1.0.0"
 hiltAndroid = "2.52"
 hiltCompiler = "1.2.0"
-hiltLifecycleViewmodel = "1.0.0-alpha03"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
@@ -13,10 +12,8 @@ junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 kotlinxCoroutinesAndroid = "1.9.0"
 kotlinxCoroutinesCore = "1.9.0"
-lifecycleRuntimeKtx = "2.8.6"
 activityCompose = "1.9.2"
 composeBom = "2024.09.02"
-lifecycleRuntimeKtxVersion = "2.8.6"
 lifecycleViewmodelKtx = "2.8.6"
 loggingInterceptor = "4.12.0"
 okhttp = "4.12.0"
@@ -25,15 +22,14 @@ retrofit = "2.11.0"
 timber = "5.0.1"
 composeNavigation = "2.8.1"
 serialization = "1.6.3"
+dagger-hilt = "2.51.1"
+kapt = "2.0.20"
 
 [libraries]
 accompanist-coil = { module = "com.google.accompanist:accompanist-coil", version.ref = "accompanistCoil" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "hiltCompiler" }
-androidx-hilt-lifecycle-viewmodel = { module = "androidx.hilt:hilt-lifecycle-viewmodel", version.ref = "hiltLifecycleViewmodel" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltCompiler" }
-#noinspection SimilarGradleDependency
-androidx-lifecycle-runtime-ktx-v286 = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtxVersion" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 coil = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 converter-retrofit = { module = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter", version.ref = "converterRetrofit" }
@@ -42,8 +38,6 @@ hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", ve
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
-#noinspection SimilarGradleDependency
-androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
@@ -67,3 +61,5 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+dagger-hilt =  { id = "com.google.dagger.hilt.android", version.ref = "dagger-hilt" }
